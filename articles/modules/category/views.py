@@ -71,7 +71,7 @@ class CategoryArticleList(ArticleList, CategoryAccesssGroupsMixin):
         user = self.request.user
 
         # Limit the articles based on the category access_group permission
-        if user is not None and user.is_authenticated():
+        if user is not None and user.is_authenticated:
             query = Q(category__access_groups__isnull=True) | Q(category__access_groups__in=user.groups.all())
         else:
             query = Q(category__access_groups__isnull=True)
