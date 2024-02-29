@@ -1,10 +1,9 @@
 import mptt
 from denorm import denormalized, depend_on_related
 from django.conf import settings
-from django.core.urlresolvers import get_callable
+from django.urls import get_callable
 from django.db import models
 from django.db.models import Q
-from django.utils.encoding import python_2_unicode_compatible
 from django.utils.translation import ugettext_lazy as _
 from feincms.admin import tree_editor as editor
 from feincms.content.application import models as app_models
@@ -29,7 +28,6 @@ class CategoryManager(models.Manager):
         return self.filter(self.active_query(user=user)).distinct()
 
 
-@python_2_unicode_compatible
 class Category(models.Model):
     ORDER_BY_CHOICES = (('publication_date', _('Publication date (oldest first)')),
                         ('-publication_date', _('Publication date (newest first)')),
@@ -39,10 +37,10 @@ class Category(models.Model):
 
     name = models.CharField(_('name'), max_length=255)
     slug = models.SlugField(_('slug'), max_length=255, help_text=_('This will be automatically generated from the name'),unique=True,editable=True)
-    parent = models.ForeignKey('self', verbose_name=_('parent'), blank=True, null=True, related_name='children')
+    parent = models.ForeignKey('self', verbose_name=_('parent'), blank=True, null=True, related_name='children', on_delete=models.SET_NULL)
     order_by = models.CharField(_('articles order'), max_length=30, choices=ORDER_BY_CHOICES, help_text=_('The order of article items in this category.'), default='-publication_date')
 
-    access_groups  = models.ManyToManyField("auth.Group", verbose_name=_('access groups'), null=True, blank=True,
+    access_groups  = models.ManyToManyField("auth.Group", verbose_name=_('access groups'), blank=True,
                                             help_text=_('Users must be logged in and a member of the group(s) to access this group.'), )
 
     @denormalized(models.CharField, max_length=255, editable=False, default='', db_index=True)
