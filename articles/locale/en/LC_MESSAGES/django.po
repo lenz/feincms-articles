@@ -1,0 +1,141 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-17 14:56+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: bases.py:23
+msgid "active"
+msgstr ""
+
+#: bases.py:25
+msgid "title"
+msgstr ""
+
+#: bases.py:27 modules/category/models.py:39
+msgid "slug"
+msgstr ""
+
+#: bases.py:29 modules/category/models.py:39
+msgid "This will be automatically generated from the name"
+msgstr ""
+
+#: bases.py:37
+msgid "article"
+msgstr ""
+
+#: bases.py:38
+msgid "articles"
+msgstr ""
+
+#: extensions/location.py:13
+msgid "location"
+msgstr ""
+
+#: extensions/location.py:28
+msgid "Location"
+msgstr ""
+
+#: extensions/tags.py:14
+msgid "tags"
+msgstr ""
+
+#: extensions/tags.py:28
+msgid "Tags"
+msgstr ""
+
+#: extensions/thumbnail.py:11
+msgid "thumbnail"
+msgstr ""
+
+#: extensions/thumbnail.py:19
+msgid "Thumbnail"
+msgstr ""
+
+#: modules/category/content.py:20
+msgid "article category list"
+msgstr ""
+
+#: modules/category/content.py:25 modules/category/content.py:31
+msgid "Layout"
+msgstr ""
+
+#: modules/category/content.py:64
+msgid "article list"
+msgstr ""
+
+#: modules/category/extensions/category.py:12 modules/category/models.py:64
+msgid "category"
+msgstr ""
+
+#: modules/category/extensions/category.py:36
+msgid "Category"
+msgstr ""
+
+#: modules/category/models.py:32
+msgid "Publication date (oldest first)"
+msgstr ""
+
+#: modules/category/models.py:33
+msgid "Publication date (newest first)"
+msgstr ""
+
+#: modules/category/models.py:34
+msgid "Title A-Z"
+msgstr ""
+
+#: modules/category/models.py:35
+msgid "Title Z-A"
+msgstr ""
+
+#: modules/category/models.py:38
+msgid "name"
+msgstr ""
+
+#: modules/category/models.py:40
+msgid "parent"
+msgstr ""
+
+#: modules/category/models.py:41
+msgid "articles order"
+msgstr ""
+
+#: modules/category/models.py:41
+msgid "The order of article items in this category."
+msgstr ""
+
+#: modules/category/models.py:43
+msgid "access groups"
+msgstr ""
+
+#: modules/category/models.py:44
+msgid ""
+"Users must be logged in and a member of the group(s) to access this group."
+msgstr ""
+
+#: modules/category/models.py:65
+msgid "categories"
+msgstr ""
+
+#: modules/category/templates/articles/category_article_detail.html:6
+#: modules/category/templates/articles/category_article_list.html:10
+msgid "Categories"
+msgstr ""
+
+#: templates/articles/article_list.html:6
+msgid "Articles"
+msgstr ""
