@@ -125,7 +125,7 @@ msgstr "Gruppen"
 #: modules/category/models.py:44
 msgid ""
 "Users must be logged in and a member of the group(s) to access this group."
-msgstr "Benutzer müssen angemeldet sein und ein Mitglied dieser Gruppe sein um Zugriff zu erhalten."
+msgstr "Benutzer müssen angemeldet und ein Mitglied dieser Gruppe sein, um Zugriff zu erhalten."
 
 #: modules/category/models.py:65
 msgid "categories"
